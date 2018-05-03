@@ -1,6 +1,6 @@
 {
   "name": "weidmann.design",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Node/Mithril app powering weidmann.design",
   "repository": "https://github.com/vyo/weidmann.design",
   "main": "src/backend/server.js",

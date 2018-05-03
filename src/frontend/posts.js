@@ -15,7 +15,6 @@ const PostList = {
       url: '/contentindex.json'
     })
     PostList.data = content.posts
-    console.log(PostList.data)
   }
 }
 
