@@ -1,0 +1,68 @@
+a {
+  color: #4c0d5b;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+body {
+  font-family: 'Inter UI', sans-serif;
+}
+code {
+  text-align: left;
+  font-family: 'Hack', monospace;
+}
+header {
+  margin-bottom: 5rem;
+}
+footer {
+  /* margin-top: 5rem; */
+}
+pre {
+  text-align: center;
+}
+img {
+}
+#archive {
+  margin-top: 5rem;
+}
+#vyo-avatar {
+  border: 0.5px solid #37424a;
+}
+@media (min-width: 20.0rem) {
+  #vyo-avatar {
+    border: 1px solid #37424a;
+  }
+}
+@media (min-width: 40.0rem) {
+  #vyo-avatar {
+    border: 2px solid #37424a;
+  }
+}
+#vyo-avatar {
+  border-radius: 50%;
+  max-width: 15%;
+  max-height: 15%;
+  display: block;
+  margin: 0 auto;
+}
+#avatar-container {
+  display: inline;
+  float: none;
+}
+.row {
+  margin-top: 2rem;
+}
+.vyo-centered {
+  text-align: center;
+}
+.vyo-top-align {
+  margin-top: 0;
+}
+.vyo-primary {
+  color: #37424a;
+}
+.vyo-secondary {
+  color: #4c0d5b;
+}
+.vyo-tertiary {
+  color: #606c74;
+}

@@ -1,0 +1,59 @@
+{
+  "name": "weidmann.design",
+  "version": "0.1.0",
+  "description": "Node/Mithril app powering weidmann.design",
+  "repository": "https://github.com/vyo/weidmann.design",
+  "main": "src/backend/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "bundle": "./node_modules/.bin/browserify src/frontend/* -o static/js/bundle.js"
+  },
+  "keywords": [
+    "hapi",
+    "mithril",
+    "milligram",
+    "reveal"
+  ],
+  "author": "Manuel Weidmann",
+  "license": "MIT",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "generator-gitignore-io": "^0.1.0",
+    "glob": "^7.1.2",
+    "good": "^8.1.1",
+    "good-bunyan": "^2.0.0",
+    "hapi": "^17.3.1",
+    "hapi-and-healthy": "^6.0.1",
+    "hapi-auth-basic": "^5.0.0",
+    "inert": "^5.1.0",
+    "moment": "^2.22.1"
+  },
+  "engines": {
+    "node": "9.4.x",
+    "npm": "6.0.x"
+  },
+  "standard": {
+    "ignore": [
+      "static/lib/",
+      "static/plugin/",
+      "static/js/reveal.js"
+    ]
+  },
+  "devDependencies": {
+    "directory-tree": "^2.1.0",
+    "bluebird": "^3.5.1",
+    "browserify": "^16.2.0",
+    "markdown-it": "^8.4.1",
+    "mithril": "^1.1.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.11",
+    "mini-css-extract-plugin": "^0.4.0",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "val-loader": "^1.1.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
+  }
+}
