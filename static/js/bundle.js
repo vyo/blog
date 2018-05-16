@@ -13891,17 +13891,17 @@ const PostList = {
       url: '/contentindex.json'
     })
     PostList.data = content.posts
-    console.log(PostList.data)
   }
 }
 
 const PostListView = () => ({
   oninit: PostList.load,
-  view: () => m('div', PostList.data.map(postInfo => [
-    m('div', Moment(postInfo.date).format('dddd, MMMM Do YYYY')),
-    m('h2', m.trust(mark.render(postInfo.title))),
-    m(`a[href=/posts/${postInfo.content.substring(0, postInfo.content.lastIndexOf('.md'))}]`, {oncreate: m.route.link}, `${postInfo.intro || ''}\n{...}`)
-  ])
+  view: () => m('div', PostList.data.map(postInfo =>
+    m('div', {class: 'vyo-spacing'}, [
+      m('div', Moment(postInfo.date).format('dddd, MMMM Do YYYY')),
+      m('h2', m.trust(mark.render(postInfo.title))),
+      m(`a[href=/posts/${postInfo.content.substring(0, postInfo.content.lastIndexOf('.md'))}]`, {oncreate: m.route.link}, `${postInfo.intro || ''}\n{...}`)
+    ]))
   )
 })
 
