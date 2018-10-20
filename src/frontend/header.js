@@ -25,7 +25,7 @@ const Header = {
               m('a', {class: 'symbol', target: '_blank', href: 'https://twitter.com/0x76796f'},
                 m('i', {class: 'fab fa-twitter'})
               ),
-              m('a', {class: 'symbol', target: '_blank', href: 'https://github.com/voy'},
+              m('a', {class: 'symbol', target: '_blank', href: 'https://github.com/vyo'},
                 m('i', {class: 'fab fa-github'})
               ),
               m('a', {class: 'symbol', target: '_blank', href: 'https://gitlab.com/vyo'},
