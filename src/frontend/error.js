@@ -26,7 +26,7 @@ const ErrorView = (error) => ({
       }
     }, [
       m('h2', error.header),
-      m('div', error.description)
+      m('div', {class: 'vyo-spacing'}, error.description)
     ])
   ]))
 })
