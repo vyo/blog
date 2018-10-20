@@ -23,8 +23,8 @@ const ContentIndex = {
     .map(file => require(file))
     .map(info => Object.assign({}, info, {
       intro: Fs.readFileSync('./static/posts/' + info.content, 'utf8').substring(0, Fs.readFileSync('./static/posts/' + info.content, 'utf8').indexOf('\n\n'))
-    })) || [],
-  talks: Glob.sync('./static/talks/**/*.json').map(file => file.substring(9)) || []
+    })).sort((a, b) => a.date < b.date) || [],
+  talks: Glob.sync('./static/talks/**/*.json').map(file => file.substring(9)).sort((a, b) => a.date < b.date) || []
 }
 
 const CIStream = Fs.createWriteStream('./static/contentindex.json')
