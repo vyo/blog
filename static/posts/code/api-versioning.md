@@ -1,8 +1,8 @@
-Versioning REST APIs, the endless point of contention.
+Versioning REST APIs, the endless point of contention. But less terrible in Kotlin, perhaps?
 
 ```kotlin
 /**
- * Doin' it wrong in 3 different ways. Twice. You're welcome.
+ * Doin' it wrong, three different ways. Twice. You're welcome.
  *
  * Heavily inspired by https://www.troyhunt.com/your-api-versioning-is-wrong-which-is/
  */

@@ -13779,7 +13779,7 @@ const ErrorView = (error) => ({
       }
     }, [
       m('h2', error.header),
-      m('div', error.description)
+      m('div', {class: 'vyo-spacing'}, error.description)
     ])
   ]))
 })
@@ -13898,8 +13898,8 @@ const PostListView = () => ({
   oninit: PostList.load,
   view: () => m('div', PostList.data.map(postInfo =>
     m('div', {class: 'vyo-spacing'}, [
-      m('div', Moment(postInfo.date).format('dddd, MMMM Do YYYY')),
-      m('h2', m.trust(mark.render(postInfo.title))),
+      m('div', {class: 'vyo-centered'}, Moment(postInfo.date).format('dddd, MMMM Do YYYY')),
+      m('h2', {class: 'vyo-centered'}, m.trust(mark.render(postInfo.title))),
       m(`a[href=/posts/${postInfo.content.substring(0, postInfo.content.lastIndexOf('.md'))}]`, {oncreate: m.route.link}, `${postInfo.intro || ''}\n{...}`)
     ]))
   )

@@ -7,7 +7,7 @@ body {
   font-family: 'Inter UI', sans-serif;
 }
 code {
-  text-align: left;
+  /* text-align: left; */
   font-family: 'Hack', monospace;
 }
 header {
@@ -22,10 +22,13 @@ pre {
 img {
 }
 li {
-  text-align: left;
+  /* text-align: left; */
   margin-left: 10rem;
   margin-right: 10rem;
   list-style-position: outside;
+}
+h2 > p {
+  text-align: center;
 }
 #archive {
   margin-top: 5rem;
@@ -57,6 +60,9 @@ li {
 .row {
   margin-top: 2rem;
 }
+.vyo-left {
+  text-align: left;
+}
 .vyo-centered {
   text-align: center;
 }
@@ -73,5 +79,7 @@ li {
   color: #606c74;
 }
 .vyo-spacing {
+  margin-left: 15%;
+  margin-right: 15%;
   margin-bottom: 5rem;
 }
