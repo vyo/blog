@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node src/backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 0",
-    "bundle": "node prepareBundle.js && ./node_modules/.bin/browserify src/frontend/* -o static/js/bundle.js"
+    "bundle": "node prepareBundle.js && ./node_modules/.bin/browserify --ignore '**/*.swp' src/frontend/* --outfile static/js/bundle.js",
+    "deploy": "now && now alias"
   },
   "keywords": [
     "hapi",
