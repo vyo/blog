@@ -1,15 +1,30 @@
 a {
   /* color: rgb(43, 44, 44); */
   color: rgb(248, 186, 213);
+  /* color: rgb(237, 35, 139); */
   margin-left: 2px;
   margin-right: 2px;
 }
+a:hover {
+  color: rgb(237, 35, 139);
+}
 body {
   font-family: 'Inter UI', sans-serif;
+  color: rgb(43, 44, 44);
+  /* background-color: rgb(43, 44, 44); */
 }
 code {
   /* text-align: left; */
+  background-color: rgb(43, 44, 44);
   font-family: 'Hack', monospace;
+  white-space: normal;
+}
+.vyo-title {
+  background-color: rgb(43, 44, 44);
+  border-radius: .4rem;
+  /* font-size: 86%; */
+  /* margin: 0 .2rem; */
+  /* padding: .2rem .5rem; */
 }
 header {
   margin-bottom: 5rem;
@@ -26,8 +41,10 @@ img {
 }
 li {
   /* text-align: left; */
-  margin-left: 10rem;
-  margin-right: 10rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  /* margin-left: 10rem; */
+  /* margin-right: 10rem; */
   list-style-position: outside;
 }
 h2 > p {
@@ -85,4 +102,8 @@ h2 > p {
   margin-left: 15%;
   margin-right: 15%;
   margin-bottom: 5rem;
+}
+.vyo-post-footer {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
