@@ -63,7 +63,7 @@ const files = async () => {
     path: '/{param*}',
     handler: {
       directory: {
-        path: 'static',
+        path: 'public',
         index: ['index.html']
       }
     }

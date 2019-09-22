@@ -13,21 +13,21 @@ Fs.readdir('./src/frontend', (err, files) => {
   files.forEach(file => {
     Bfy.add(Path.join('./src/frontend', Path.relative(process.cwd(), file)))
   })
-  const Bundle = Fs.createWriteStream('./static/js/bundle.js')
+  const Bundle = Fs.createWriteStream('./public/js/bundle.js')
   Bfy.bundle().pipe(Bundle)
 })
 
 // build content index
 const ContentIndex = {
-  posts: Glob.sync('./static/posts/**/*.json')
+  posts: Glob.sync('./public/posts/**/*.json')
     .map(file => require(file))
     .map(info => Object.assign({}, info, {
-      intro: Fs.readFileSync('./static/posts/' + info.content, 'utf8').substring(0, Fs.readFileSync('./static/posts/' + info.content, 'utf8').indexOf('\n\n'))
+      intro: Fs.readFileSync('./public/posts/' + info.content, 'utf8').substring(0, Fs.readFileSync('./public/posts/' + info.content, 'utf8').indexOf('\n\n'))
     })).sort((a, b) => a.date.localeCompare(b.date)).reverse() || [],
-  talks: Glob.sync('./static/talks/**/*.json').map(file => file.substring(9)).sort((a, b) => a.date.localeCompare(b.date)).reverse() || []
+  talks: Glob.sync('./public/talks/**/*.json').map(file => file.substring(9)).sort((a, b) => a.date.localeCompare(b.date)).reverse() || []
 }
 
-const CIStream = Fs.createWriteStream('./static/contentindex.json')
+const CIStream = Fs.createWriteStream('./public/contentindex.json')
 
 CIStream.write(JSON.stringify(ContentIndex))
 CIStream.end()
