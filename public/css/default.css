@@ -21,11 +21,15 @@ code {
   white-space: normal;
 }
 .vyo-title {
+  color: rgb(248, 186, 213);
   background-color: rgb(43, 44, 44);
   border-radius: .4rem;
-  /* font-size: 86%; */
-  /* margin: 0 .2rem; */
-  /* padding: .2rem .5rem; */
+}
+.vyo-title:hover {
+  color: rgb(237, 35, 139);
+}
+.vyo-no-link.vyo-title:hover {
+  color: rgb(248, 186, 213);
 }
 header {
   margin-bottom: 5rem;
