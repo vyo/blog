@@ -1,14 +1,14 @@
 {
   "name": "vyo.sh",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Node/Mithril app powering weidmann.design",
   "repository": "https://github.com/vyo/weidmann.design",
   "main": "src/backend/server.js",
   "scripts": {
     "start": "node src/backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 0",
-    "bundle": "node prepareBundle.js && ./node_modules/.bin/browserify --ignore '**/*.swp' src/frontend/* --outfile static/js/bundle.js",
-    "deploy": "now && now alias"
+    "bundle": "node prepareBundle.js && ./node_modules/.bin/browserify --ignore '**/*.swp' src/frontend/* --outfile public/js/bundle.js",
+    "deploy": "now --target production"
   },
   "keywords": [
     "hapi",
@@ -37,9 +37,9 @@
   },
   "standard": {
     "ignore": [
-      "static/lib/",
-      "static/plugin/",
-      "static/js/reveal.js"
+      "public/lib/",
+      "public/plugin/",
+      "public/js/reveal.js"
     ]
   },
   "devDependencies": {

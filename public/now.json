@@ -1,0 +1,10 @@
+{
+  "name": "Blog",
+  "scope": "vyo",
+  "version": 2,
+  "public": false,
+  "alias": [
+    "blog.vyo.sh"
+  ]
+}
+
