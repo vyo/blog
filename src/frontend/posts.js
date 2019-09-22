@@ -34,13 +34,11 @@ const Post = {
   load: async (name) => {
     const postMeta = await m.request({
       method: 'GET',
-      // url: `/posts/${name}.json`,
-      url: '/posts/:name',
+      url: '/posts/:name.json',
       params: {name: name}
     })
     const postContent = await m.request({
       method: 'GET',
-      // url: `/posts/${postMeta.content}`,
       url: '/posts/:content',
       params: {content: postMeta.content},
       responseType: 'text',
