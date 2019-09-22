@@ -1,13 +1,11 @@
 'use strict'
 
-const Hapi = require('hapi')
+const Auth = require('@hapi/basic')
+const Hapi = require('@hapi/hapi')
 const Bunyan = require('bunyan')
-const Good = require('good')
-const Healthy = require('hapi-and-healthy')
-const Inert = require('inert')
-const Auth = require('hapi-auth-basic')
+const Good = require('@hapi/good')
+const Inert = require('@hapi/inert')
 const Self = require('../../package')
-const Env = process.env.NODE_ENV || 'DEV'
 const Port = process.env.PORT || 5000
 const OS = require('os')
 const host = OS.hostname()
@@ -52,33 +50,11 @@ const validate = async (request, username, password, h) => {
 const rest = async () => {
   server.route({
     method: 'GET',
-    path: '/api/hello',
+    path: '/api/beep',
     handler: function (request, h) {
-      return 'hello world'
+      return 'boop'
     }
   })
-
-  // server.route({
-  //   method: 'GET',
-  //   path: '/api/pipelines',
-  //   handler: function (request, h) {
-  //     const detailedRaw = request.query.detailed
-  //     const detailed = `${detailedRaw}`.toLowerCase() === 'true'
-
-  //     const limitRaw = request.query.limit
-  //     const limit = Number.parseInt(limitRaw)
-
-  //     return Gitlab.pipelines(detailed, limit)
-  //   }
-  // })
-
-  // server.route({
-  //   method: 'GET',
-  //   path: '/api/deployments',
-  //   handler: function (request, h) {
-  //     return Gitlab.deployments()
-  //   }
-  // })
 }
 
 const files = async () => {
@@ -109,17 +85,6 @@ async function start () {
 
     await files()
 
-    await server.register({
-      plugin: Healthy,
-      options: {
-        path: '/api/health',
-        id: host,
-        env: Env,
-        name: Self.name,
-        version: Self.version
-      }
-    })
-
     await server.start()
   } catch (err) {
     server.log('error', err)
@@ -128,8 +93,7 @@ async function start () {
 
   server.log('info', {host: host})
   server.log('info', {uri: server.info.uri})
-  server.log('info', {name: Self.name})
   server.log('info', {version: Self.version})
-};
+}
 
 start()

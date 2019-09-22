@@ -13,8 +13,5 @@ m.mount(footerAnchour, require('./footer'))
 m.route(rootAnchour, '/posts', {
   '/legal': require('./legal'),
   '/posts': require('./posts').posts,
-  '/posts/:name...': require('./posts').post,
-  '/error/internal': require('./error').internal,
-  '/error/notfound': require('./error').notFound,
-  '/:error...': require('./error').notFound
+  '/posts/:name...': require('./posts').post
 })

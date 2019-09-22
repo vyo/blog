@@ -11,7 +11,7 @@ const Footer = {
             'Crafted with ',
             m('i', {class: 'fas fa-heart vyo-secondary'}),
             ', powered by Mithril & Milligram. | ',
-            m('a[href=/legal/]', {oncreate: m.route.link}, 'Legal notice')
+            m(m.route.Link, {href: '/legal'}, 'Legal notice')
           ])
         ]
       )

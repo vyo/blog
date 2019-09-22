@@ -1,5 +1,5 @@
 {
-  "name": "weidmann.design",
+  "name": "vyo.sh",
   "version": "0.3.0",
   "description": "Node/Mithril app powering weidmann.design",
   "repository": "https://github.com/vyo/weidmann.design",
@@ -19,16 +19,17 @@
   "author": "Manuel Weidmann",
   "license": "MIT",
   "dependencies": {
+    "@hapi/basic": "^5.1.1",
+    "@hapi/good": "^8.2.3",
+    "@hapi/hapi": "^18.4.0",
+    "@hapi/hoek": "^8.2.4",
+    "@hapi/inert": "^5.2.2",
+    "@hapi/joi": "^16.1.4",
+    "@hapi/topo": "^3.1.4",
     "bunyan": "^1.8.12",
-    "generator-gitignore-io": "^0.1.0",
-    "glob": "^7.1.3",
-    "good": "^8.1.1",
-    "good-bunyan": "^2.0.1",
-    "hapi": "^17.6.0",
-    "hapi-and-healthy": "^6.0.1",
-    "hapi-auth-basic": "^5.0.0",
-    "inert": "^5.1.0",
-    "moment": "^2.22.2"
+    "glob": "^7.1.4",
+    "good-bunyan": "^3.0.1",
+    "moment": "^2.24.0"
   },
   "engines": {
     "node": "9.4.x",
@@ -42,20 +43,8 @@
     ]
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "bluebird": "^3.5.2",
-    "browserify": "^16.2.3",
-    "css-loader": "^0.28.11",
-    "directory-tree": "^2.1.0",
+    "browserify": "^16.5.0",
     "markdown-it": "^8.4.2",
-    "mini-css-extract-plugin": "^0.4.4",
-    "mithril": "^1.1.6",
-    "style-loader": "^0.21.0",
-    "uglifyjs-webpack-plugin": "^1.3.0",
-    "val-loader": "^1.1.1",
-    "webpack": "^4.22.0",
-    "webpack-cli": "^2.1.5"
+    "mithril": "^2.0.4"
   }
 }

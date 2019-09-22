@@ -23,8 +23,8 @@ const PostListView = () => ({
   view: () => m('div', PostList.data.map(postInfo =>
     m('div', {class: 'vyo-spacing'}, [
       m('div', {class: 'vyo-centered'}, Moment(postInfo.date).format('dddd, MMMM Do YYYY')),
-      m('h2', {class: 'vyo-centered'}, m.trust(mark.render(postInfo.title))),
-      m(`a[href=/posts/${postInfo.content.substring(0, postInfo.content.lastIndexOf('.md'))}]`, {oncreate: m.route.link}, `${postInfo.intro || ''}\n{...}`)
+      m(m.route.Link, {href: `/posts/${postInfo.content.substring(0, postInfo.content.lastIndexOf('.md'))}`}, m('h2', {class: 'vyo-centered'}, m.trust(mark.render(postInfo.title)))),
+      m(m.route.Link, {href: `/posts/${postInfo.content.substring(0, postInfo.content.lastIndexOf('.md'))}`}, `${postInfo.intro || ''}\n{...}`)
     ]))
   )
 })
@@ -34,12 +34,17 @@ const Post = {
   load: async (name) => {
     const postMeta = await m.request({
       method: 'GET',
-      url: `/posts/${name}.json`
+      // url: `/posts/${name}.json`,
+      url: '/posts/:name',
+      params: {name: name}
     })
     const postContent = await m.request({
       method: 'GET',
-      url: `/posts/${postMeta.content}`,
-      deserialize: (value) => mark.render(value)
+      // url: `/posts/${postMeta.content}`,
+      url: '/posts/:content',
+      params: {content: postMeta.content},
+      responseType: 'text',
+      deserialize: (value) => { return mark.render(value) }
     })
     Post.data = postMeta
     Post.data.md = postContent

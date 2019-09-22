@@ -10,11 +10,11 @@ const Header = {
       }, m('div', {
         class: 'avatar-container vyo-centered'
       }, [
-        m('a', {href: '/'},
+        m(m.route.Link, {href: '/'},
           m('img', {
             id: 'vyo-avatar',
-            src: 'img/vyolin_avatar.png',
-            alt: 'weidmann.design'
+            src: 'img/Logo.png',
+            alt: 'blog.vyo.sh'
           })),
         m('div', {class: 'row vyo-top-align'},
           m('div', {class: 'column column-50 column-offset-25'}, 'Vim, vinyl, vino.')
@@ -23,6 +23,9 @@ const Header = {
           m('div', {class: 'column column-50 column-offset-25'},
             [
               m('a', {class: 'symbol', target: '_blank', href: 'https://twitter.com/0x76796f'},
+                m('i', {class: 'fab fa-twitter'})
+              ),
+              m('a', {class: 'symbol', target: '_blank', href: 'https://twitter.com/vyocodes'},
                 m('i', {class: 'fab fa-twitter'})
               ),
               m('a', {class: 'symbol', target: '_blank', href: 'https://github.com/vyo'},

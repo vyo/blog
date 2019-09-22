@@ -2,7 +2,7 @@
 
 const m = require('mithril')
 
-const Footer = {
+const Legal = {
   view: () => m('div', {class: 'container vyo-centered'},
     m('div', {class: 'row'},
       m('div', {class: 'column column-50 column-offset-25'},
@@ -21,4 +21,4 @@ const Footer = {
   )
 }
 
-module.exports = Footer
+module.exports = Legal
