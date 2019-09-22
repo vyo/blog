@@ -9,6 +9,7 @@ a:hover {
   color: rgb(237, 35, 139);
 }
 body {
+  overflow: scroll;
   font-family: 'Inter UI', sans-serif;
   color: rgb(43, 44, 44);
   /* background-color: rgb(43, 44, 44); */
