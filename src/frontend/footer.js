@@ -10,7 +10,15 @@ const Footer = {
           m('p', [
             'Crafted with ',
             m('i', {class: 'fas fa-heart vyo-secondary'}),
-            ', powered by Mithril & Milligram. | ',
+            ', powered by ',
+            m('a', {href: 'https://mithril.js.org'}, 'Mithril'),
+            ' & ',
+            m('a', {href: 'https://milligram.io'}, 'Milligram'),
+            '. Logo by ',
+            m('a', {href: 'https://twitter.com/caitelle1'}, 'cait'),
+            '.'
+          ]),
+          m('p', [
             m(m.route.Link, {href: '/legal'}, 'Legal notice')
           ])
         ]
