@@ -15087,29 +15087,31 @@ const PostList = {
 
 const PostListView = () => ({
   oninit: PostList.load,
-  view: () => m('div', PostList.data.map(postInfo =>
-    m('div', {class: 'vyo-spacing'}, [
-      m(m.route.Link,
-        {
-          // class: 'vyo-title',
-          href: `/posts/${postInfo.content.substring(0, postInfo.content.lastIndexOf('.md'))}`
-        },
-        m('h2', {class: 'vyo-title vyo-centered'}, m.trust(mark.render(postInfo.title)))
-      ),
-      m(m.route.Link,
-        {
-          class: 'vyo-primary',
-          href: `/posts/${postInfo.content.substring(0, postInfo.content.lastIndexOf('.md'))}`
-        },
-        `${postInfo.intro || ''}\n{...}`
-      ),
-      m('div',
-        {
-          class: 'vyo-centered vyo-post-footer'
-        },
-        Moment(postInfo.date).format('dddd, MMMM Do YYYY')
-      )
-    ]))
+  view: () => m('div', PostList.data
+    .filter(postInfo => Moment().isSameOrAfter(postInfo.date))
+    .map(postInfo =>
+      m('div', {class: 'vyo-spacing'}, [
+        m(m.route.Link,
+          {
+            // class: 'vyo-title',
+            href: `/posts/${postInfo.content.substring(0, postInfo.content.lastIndexOf('.md'))}`
+          },
+          m('h2', {class: 'vyo-title vyo-centered'}, m.trust(mark.render(postInfo.title)))
+        ),
+        m(m.route.Link,
+          {
+            class: 'vyo-primary',
+            href: `/posts/${postInfo.content.substring(0, postInfo.content.lastIndexOf('.md'))}`
+          },
+          `${postInfo.intro || ''}\n{...}`
+        ),
+        m('div',
+          {
+            class: 'vyo-centered vyo-post-footer'
+          },
+          Moment(postInfo.date).format('dddd, MMMM Do YYYY')
+        )
+      ]))
   )
 })
 
