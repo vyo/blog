@@ -1,4 +1,9 @@
-*A kind warning*:
+You love Docker, you put your data in volumes,
+put a nice label on them when backing them up,
+and use an excessive amount of temporary containers while doing so.
+Might as well wrap it all up nice and tidy!
+
+### A kind warning:
 
 > This is more a post mortem, read me, post-it notes
 kind of thing than a set of hard and fast rules and rigorous tools.
