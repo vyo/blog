@@ -1,36 +1,76 @@
+html {
+  --light-colour-background: rgb(243, 244, 244);
+  --light-colour-primary: rgb(43, 44, 44);
+  --light-colour-secondary: rgb(248, 186, 213);
+  --light-colour-tertiary: rgb(237, 35, 139);
+
+  /* swapped */
+  --dark-colour-background: rgb(43, 44, 44);
+  /* --dark-colour-primary: rgb(248, 186, 213); */
+  /* --dark-colour-secondary: rgb(237, 35, 139); */
+  /* --dark-colour-tertiary: rgb(243, 244, 244); */
+
+  /* burnt umber: rgb(99, 81, 71) */
+  /* muted, i.e. mixed with burnt umber one-to-one */
+  --dark-colour-primary: rgb(173, 135, 142);
+  --dark-colour-secondary: rgb(168, 58, 105);
+  --dark-colour-tertiary: rgb(171, 162, 162);
+
+  --colour-background: var(--light-colour-background);
+  --colour-primary: var(--light-colour-primary);
+  --colour-secondary: var(--light-colour-secondary);
+  --colour-tertiary: var(--light-colour-tertiary);
+
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    --colour-background: var(--dark-colour-background);
+    --colour-primary: var(--dark-colour-primary);
+    --colour-secondary: var(--dark-colour-secondary);
+    --colour-tertiary: var(--dark-colour-tertiary);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    --colour-background: var(--light-colour-background);
+    --colour-primary: var(--light-colour-primary);
+    --colour-secondary: var(--light-colour-secondary);
+    --colour-tertiary: var(--light-colour-tertiary);
+  }
+}
 a {
-  /* color: rgb(43, 44, 44); */
-  color: rgb(248, 186, 213);
-  /* color: rgb(237, 35, 139); */
+  color: var(--colour-secondary);
   margin-left: 2px;
   margin-right: 2px;
 }
 a:hover {
-  color: rgb(237, 35, 139);
+  color: var(--colour-tertiary);
 }
 body {
   overflow: scroll;
   font-family: 'Inter UI', sans-serif;
-  color: rgb(43, 44, 44);
-  /* background-color: rgb(43, 44, 44); */
+  color: var(--colour-primary);
+  background-color: var(--colour-background);
+  transition: all 1.5s ease-in-out;
 }
 code {
   /* text-align: left; */
-  color: rgb(248, 186, 213);
-  background-color: rgb(43, 44, 44);
+  color: var(--colour-secondary);
+  background-color: var(--colour-primary);
   font-family: 'Hack', monospace;
   white-space: normal;
 }
 .vyo-title {
-  color: rgb(248, 186, 213);
-  background-color: rgb(43, 44, 44);
+  color: var(--colour-secondary);
+  background-color: var(--colour-primary);
   border-radius: .4rem;
 }
 .vyo-title:hover {
-  color: rgb(237, 35, 139);
+  color: var(--colour-tertiary);
 }
 .vyo-no-link.vyo-title:hover {
-  color: rgb(248, 186, 213);
+  color: var(--colour-secondary);
 }
 header {
   margin-bottom: 5rem;
@@ -40,8 +80,8 @@ footer {
 }
 pre {
   text-align: center;
-  background-color: rgb(43, 44, 44);
-  border-left-color: rgb(248, 186, 213);
+  background-color: var(--colour-background);
+  border-left-color: var(--colour-secondary);
 }
 img {
 }
@@ -96,13 +136,13 @@ h2 > p {
   margin-top: 0;
 }
 .vyo-primary {
-  color: rgb(43, 44, 44);
+  color: var(--colour-primary);
 }
 .vyo-secondary {
-  color: rgb(248, 186, 213);
+  color: var(--colour-secondary);
 }
 .vyo-tertiary {
-  color: rgb(237, 35, 139);
+  color: var(--colour-tertiary);
 }
 .vyo-spacing {
   margin-left: 15%;
