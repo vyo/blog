@@ -145,9 +145,13 @@ h2 > p {
   color: var(--colour-tertiary);
 }
 .vyo-spacing {
-  margin-left: 15%;
-  margin-right: 15%;
   margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .vyo-spacing {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
 }
 .vyo-post-footer {
   margin-top: 2.5rem;

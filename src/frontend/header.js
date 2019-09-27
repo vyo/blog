@@ -6,7 +6,7 @@ const Header = {
   view: () => [
     m('div', {class: 'row'},
       m('div', {
-        class: 'column column-50 column-offset-25'
+        class: 'column'
       }, m('div', {
         class: 'avatar-container vyo-centered'
       }, [
@@ -17,10 +17,10 @@ const Header = {
             alt: 'blog.vyo.sh'
           })),
         m('div', {class: 'row vyo-top-align'},
-          m('div', {class: 'column column-50 column-offset-25'}, 'Vim, vinyl, vino.')
+          m('div', {class: 'column'}, 'Vim, vinyl, vino.')
         ),
         m('div', {class: 'row vyo-top-align'},
-          m('div', {class: 'column column-50 column-offset-25'},
+          m('div', {class: 'column'},
             [
               m('a', {class: 'symbol', target: '_blank', href: 'https://twitter.com/0x76796f'},
                 m('i', {class: 'fab fa-twitter'})
