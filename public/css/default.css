@@ -52,7 +52,7 @@ body {
   font-family: 'Inter UI', sans-serif;
   color: var(--colour-primary);
   background-color: var(--colour-background);
-  transition: all 1.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 code {
   /* text-align: left; */
