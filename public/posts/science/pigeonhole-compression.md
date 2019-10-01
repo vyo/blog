@@ -185,7 +185,7 @@ domain     -->  codomain
 ```
 
 Summing up all these leftovers, that is half of the set of length `n`,
-that is `2**(n-1` elements, with the half the of next smaller one,
+that is `2**(n-1` elements, with half of the next smaller one,
 being `2**(n-2)` elements, might remind you of a particular series of
 summations.
 
