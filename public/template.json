@@ -1,0 +1,7 @@
+{
+  "title": "[untitled]",
+  "tags": [
+  ],
+  "date": "$(date '+%F')",
+  "content": "category/title.md"
+}
