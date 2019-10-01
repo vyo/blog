@@ -120,13 +120,14 @@ Or, colloquially:
 
 ### Paradox City
 
-Let's have a look at how our made up compression function holds up in respect
-to these definitions of cardinality, keeping in mind that, as per our definition:
+So does our made up compression function hold up in respect to these definitions of cardinality?
+Keep in mind that, as per our definition:
  - our domain has higher cardinality than our codomain
  - our function is a bijection, thus injective.
 
-This is in conflict with the pigeonhole principle: Our function can satisfy only
-one or the other condition. Since our domain is bigger than our codomain by
+In short, it does not. It's in conflict with the pigeonhole principle:
+Our function can satisfy only one or the other condition.   
+Since our domain is bigger than our codomain by
 virtue of definition and construction - go ahead and count for e.g. `n := 3` -
 it follows that our assumption of our function being injective must be false.
 
