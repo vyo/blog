@@ -102,9 +102,9 @@ Our outputs are supposed to be shorter, so let's not overdo it and say they have
 `n-1`; this would make their cardinality `2**(n-1)`.
 
 Definitions, again:   
-`Totality`: For all elements a out of the domain there exists an element b in its codomain such
-that f(a) = b. (here for completeness only, this is a necessary attribute of any function)   
-`Injection`: For all elements a, b out of the domain it holds that f(a) = f(b) => a = b
+`Totality`: For all elements `a` out of the domain there exists an element `b` in its codomain such
+that `f(a) = b`. (here for completeness only, this is a necessary attribute of any function)   
+`Injection`: For all elements `a`, `b` out of the domain it holds that `f(a) = f(b) => a = b`.
 
 A different definition of `Cardinality`:
 
