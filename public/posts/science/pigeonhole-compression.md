@@ -4,8 +4,11 @@ Naturally, I immediately blurted out `Pigeonhole Principle`, and proceeded to pr
 answer that wasn't entirely wrong, but not overly well articulated, either.
 So let's try again.
 
+We'll have a quick look at what compression is, on a mathy level, test out its
+limits, and lastly have a go at creating and evaluating a compression algorithm ourselves.
+
 I'll try and aim for accuracy but in the end this is more a mental post-it note of sorts,
-so it'll probably be a bit light on the science, and heavy on the puns.
+so it'll probably be a bit light on the science, with the occasional attempt at humour.
 
 ### Bookkeeping
 
@@ -22,7 +25,6 @@ page here:
  - `Bijection`: A `Function` that is both `Injective` and `Surjective`
  - `Reversible Function`: Make an educated guess. Also, it needs to be a `Bijection`.
  - `Compression`: A reversible `Bijection` from a `Set` of finite bit sequences onto itself.
- - `Hash`: A `Surjection` from a `Set` of finite bit sequences onto a `Set` of finite bit sequences of lower `Cardinality`.
 
 Well, that's a pile of words right there...
 
@@ -84,7 +86,7 @@ So now we can take the longer input and map it to the shorter output - yes!, and
 we simply take the remaining shorter input and map it to the longer - aww, snap!
 
 You can go and try and free up more pairs; it won't change the fundamental
-problem, however =(
+problem, however.
 
 ### Proof?
 
