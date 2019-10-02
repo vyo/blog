@@ -4,7 +4,7 @@ const m = require('mithril')
 
 const Header = {
   view: () => [
-    m('div', {class: 'row'},
+    m('div', {class: 'row vyo-snap-element'},
       m('div', {
         class: 'column'
       }, m('div', {

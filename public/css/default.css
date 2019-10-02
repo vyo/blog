@@ -48,7 +48,9 @@ a:hover {
   color: var(--colour-tertiary);
 }
 body {
-  overflow: scroll;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
   font-family: 'Inter UI', sans-serif;
   color: var(--colour-primary);
   background-color: var(--colour-background);
@@ -143,6 +145,22 @@ h2 > p {
 }
 .vyo-tertiary {
   color: var(--colour-tertiary);
+}
+.vyo-snap-container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: both mandatory;
+  scroll-snap-stop: always;
+  padding-right : 15px;
+}
+@media (max-width: 768px) {
+  .vyo-snap-container {
+    padding-right : inherit;
+  }
+}
+.vyo-snap-element {
+  /* height: 100vh; */
+  scroll-snap-align: start;
 }
 .vyo-spacing {
   margin-bottom: 5rem;

@@ -23,7 +23,7 @@ const PostListView = () => ({
   view: () => m('div', PostList.data
     .filter(postInfo => Moment().isSameOrAfter(postInfo.date))
     .map(postInfo =>
-      m('div', {class: 'vyo-spacing'}, [
+      m('div', {class: 'vyo-spacing vyo-snap-element'}, [
         m(m.route.Link,
           {
             // class: 'vyo-title',
