@@ -5,16 +5,20 @@ html {
   --light-colour-tertiary: rgb(237, 35, 139);
 
   /* swapped */
-  --dark-colour-background: rgb(43, 44, 44);
+  /* --dark-colour-background: rgb(43, 44, 44); */
   /* --dark-colour-primary: rgb(248, 186, 213); */
   /* --dark-colour-secondary: rgb(237, 35, 139); */
   /* --dark-colour-tertiary: rgb(243, 244, 244); */
 
   /* burnt umber: rgb(99, 81, 71) */
+  /* with an additional dash of pink: rgb(159, 81, 111) */
   /* muted, i.e. mixed with burnt umber one-to-one */
-  --dark-colour-primary: rgb(173, 135, 142);
-  --dark-colour-secondary: rgb(168, 58, 105);
-  --dark-colour-tertiary: rgb(171, 162, 162);
+  /* --dark-colour-background: rgb(50, 33, 38); */
+  --dark-colour-background: rgb(43, 44, 44);
+  --dark-colour-primary: rgb(203, 133, 162);
+  --dark-colour-secondary: rgb(159, 81, 111);
+  /* --dark-colour-tertiary: rgb(237, 35, 139); */
+  --dark-colour-tertiary: rgb(186, 58, 125);
 
   --colour-background: var(--light-colour-background);
   --colour-primary: var(--light-colour-primary);
