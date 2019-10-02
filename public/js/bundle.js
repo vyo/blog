@@ -14992,7 +14992,7 @@ const m = require('mithril')
 
 const Header = {
   view: () => [
-    m('div', {class: 'row'},
+    m('div', {class: 'row vyo-snap-element'},
       m('div', {
         class: 'column'
       }, m('div', {
@@ -15090,7 +15090,7 @@ const PostListView = () => ({
   view: () => m('div', PostList.data
     .filter(postInfo => Moment().isSameOrAfter(postInfo.date))
     .map(postInfo =>
-      m('div', {class: 'vyo-spacing'}, [
+      m('div', {class: 'vyo-spacing vyo-snap-element'}, [
         m(m.route.Link,
           {
             // class: 'vyo-title',
