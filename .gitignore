@@ -278,3 +278,5 @@ tags
 
 
 # End of https://www.gitignore.io/api/intellij,intellij+all,intellij+iml,macos,node,sublimetext,vim
+
+.vercel
