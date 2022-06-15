@@ -1,8 +1,8 @@
 {
   "name": "vyo.sh",
   "version": "1.4.0",
-  "description": "Node/Mithril app powering weidmann.design",
-  "repository": "https://github.com/vyo/weidmann.design",
+  "description": "Node/Mithril app powering blog.vyo.sh",
+  "repository": "https://github.com/vyo/blog",
   "main": "src/backend/server.js",
   "scripts": {
     "start": "node src/backend/server.js",
