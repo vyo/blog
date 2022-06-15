@@ -10,7 +10,7 @@ const Port = process.env.PORT || 5000
 const OS = require('os')
 const host = OS.hostname()
 
-const Logger = Bunyan.createLogger({ name: 'weidmann.design', level: 'info' })
+const Logger = Bunyan.createLogger({ name: 'vyo.sh', level: 'debug' })
 
 const server = Hapi.server({
   host: '0.0.0.0',
