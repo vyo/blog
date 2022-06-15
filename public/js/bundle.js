@@ -16527,7 +16527,7 @@ m.route(rootAnchour, '/posts', {
 const m = require('mithril')
 
 const Footer = {
-  view: () => m('div', {class: 'container vyo-centered'},
+  view: () => m('div', {class: 'container vyo-centered vyo-snap-element'},
     m('div', {class: 'row'},
       m('div', {class: 'column column-50 column-offset-25'},
         [
