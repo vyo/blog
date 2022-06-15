@@ -32,8 +32,8 @@
     "moment": "^2.24.0"
   },
   "engines": {
-    "node": "9.4.x",
-    "npm": "6.0.x"
+    "node": "v18.3.0",
+    "npm": "8.11.0" 
   },
   "standard": {
     "ignore": [
@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "browserify": "^16.5.0",
-    "markdown-it": "^8.4.2",
+    "markdown-it": "^13.0.1",
     "mithril": "^2.0.4"
   }
 }
