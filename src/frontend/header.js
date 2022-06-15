@@ -8,7 +8,7 @@ const Header = {
       m('div', {
         class: 'column'
       }, m('div', {
-        class: 'avatar-container vyo-centered'
+        class: 'avatar-container vyo-centered vyo-snap-element'
       }, [
         m(m.route.Link, {href: '/'},
           m('img', {

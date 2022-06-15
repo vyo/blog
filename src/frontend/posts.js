@@ -71,7 +71,7 @@ const Post = {
 const PostView = (name) => ({
   oninit: (vnode) => Post.load(vnode.attrs.name),
   view: () => {
-    return m('div', [
+    return m('div', {class: 'vyo-snap-element'}, [
       m('h2', m.trust(mark.render(Post.data.title || '[untitled]'))),
       m.trust(Post.data.md)
     ])
