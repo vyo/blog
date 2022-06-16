@@ -26,7 +26,6 @@ const PostListView = () => ({
       m('div', {class: 'vyo-spacing vyo-snap-element'}, [
         m(m.route.Link,
           {
-            // class: 'vyo-title',
             href: `/posts/${postInfo.content.substring(0, postInfo.content.lastIndexOf('.md'))}`
           },
           m('h2', {class: 'vyo-title vyo-centered'}, m.trust(mark.render(postInfo.title)))
@@ -36,7 +35,7 @@ const PostListView = () => ({
             class: 'vyo-primary',
             href: `/posts/${postInfo.content.substring(0, postInfo.content.lastIndexOf('.md'))}`
           },
-          `${postInfo.intro || ''}\n{...}`
+          m.trust(mark.render(`${postInfo.intro || ''}\n{...}`))
         ),
         m('div',
           {
