@@ -9,7 +9,7 @@ const Footer = {
         [
           m('p', [
             'Crafted with ',
-            m('i', {class: 'fas fa-heart vyo-secondary'}),
+            m('i', {class: 'fas fa-heart vyo-primary'}),
             ', powered by ',
             m('a', {href: 'https://mithril.js.org'}, 'Mithril'),
             ' & ',
