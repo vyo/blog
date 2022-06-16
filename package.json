@@ -8,6 +8,7 @@
     "start": "node src/backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 0",
     "bundle": "node prepareBundle.js && ./node_modules/.bin/browserify --ignore '**/*.swp' src/frontend/* --outfile public/js/bundle.js",
+    "build": "npm run bundle",
     "deploy": "vercel --target production"
   },
   "keywords": [
