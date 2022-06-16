@@ -130,7 +130,8 @@ h2 > p {
   height: 100vh;
   overflow-y: auto;
   scroll-snap-type: both mandatory;
-  scroll-snap-stop: always;
+  scroll-snap-stop: normal;
+  scroll-behaviour: smooth;
   padding-right : 15px;
 }
 @media (max-width: 768px) {
