@@ -151,7 +151,7 @@ BACKUP_ACCESS="$READONLY"
 ```
 
 What happens if we write to the `volume` we were meant to read from? Yes, that is right, we die.
-Or at the very least we're on the path for madness and sweaty palms.
+Or at the very least we're on the path to madness and sweaty palms.
 
 So let's opt for more conservative defaults. Literally.
 
@@ -168,7 +168,7 @@ fi
 ```
 
 `Read-only` is all nice and well until you have to go and actually `write` something.
-Would've thunk. But we'll minimise the writeability at least, so that's nice.
+Who would've thunk. But we'll minimise the writeability at least, so that's nice.
 
 ------------
 
@@ -207,7 +207,7 @@ then
 fi
 ```
 
-And finally, we'll take all these sweet sweet validated inputs and computed parameters
+And finally, we'll take all these sweet, sweet validated inputs and computed parameters
 and turn them into the sort of boring `docker run` commands that we'd have
 crafted ourselves otherwise. Or hadn't. Whatever.
 
